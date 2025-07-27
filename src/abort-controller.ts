@@ -1,9 +1,11 @@
 // istanbul ignore file
 let AbortController: new () => AbortController;
-if (typeof window === 'undefined') {
+const browserGlobal =
+    typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : null; // self is the global in web workers
+if (!browserGlobal) {
     AbortController = require('abort-controller');
-} else if ('signal' in new Request('')) {
-    AbortController = window.AbortController;
+} else if ('signal' in new Request('https://airtable.com')) {
+    AbortController = browserGlobal.AbortController;
 } else {
     /* eslint-disable @typescript-eslint/no-var-requires */
     const polyfill = require('abortcontroller-polyfill/dist/cjs-ponyfill');

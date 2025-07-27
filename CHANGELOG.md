@@ -1,3 +1,31 @@
+# v0.12.2
+ * Fix invalid URL error in `abort-controller`
+
+# v0.12.1
+ * Add `recordMetadata` param to `table.select(params)` in order to fetch comment counts, available as `record.commentCount`.
+
+# v0.11.6
+ * Remove behavior of including `AIRTABLE_API_KEY` in airtable.browser.js via envify
+ * Add web worker compatibility
+
+# v0.11.5
+ * Update select() and list() to support to use POST endpoint when GET url length would exceed Airtable's 16k character limit
+ * Update select() and list() to explicitly choose to use GET or POST endpoint via new 'method' arg
+
+# v0.11.4
+ * Add support for returnFieldsByFieldId param.
+
+# v0.11.3
+ * Add a UMD build to use for browser-targeted builds. This fixes an issue where other apps that
+ use airtable.js as a dependency were bundling code that expects to run in a node environment when
+ building for a browser enviornment.
+
+# v0.11.2
+ * Bump NPM package versions (#276, #281, #293, #296, #297, #298)
+
+# v0.11.1
+ * Bump NPM package versions (#250, #253, #266, #267, #268)
+
 # v0.11.0
  * Add support for custom headers
  * Allow requestTimeout to be configured like other AirtableOptions
