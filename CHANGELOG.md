@@ -1,3 +1,109 @@
+# v0.12.2
+ * Fix invalid URL error in `abort-controller`
+
+# v0.12.1
+ * Add `recordMetadata` param to `table.select(params)` in order to fetch comment counts, available as `record.commentCount`.
+
+# v0.11.6
+ * Remove behavior of including `AIRTABLE_API_KEY` in airtable.browser.js via envify
+ * Add web worker compatibility
+
+# v0.11.5
+ * Update select() and list() to support to use POST endpoint when GET url length would exceed Airtable's 16k character limit
+ * Update select() and list() to explicitly choose to use GET or POST endpoint via new 'method' arg
+
+# v0.11.4
+ * Add support for returnFieldsByFieldId param.
+
+# v0.11.3
+ * Add a UMD build to use for browser-targeted builds. This fixes an issue where other apps that
+ use airtable.js as a dependency were bundling code that expects to run in a node environment when
+ building for a browser enviornment.
+
+# v0.11.2
+ * Bump NPM package versions (#276, #281, #293, #296, #297, #298)
+
+# v0.11.1
+ * Bump NPM package versions (#250, #253, #266, #267, #268)
+
+# v0.11.0
+ * Add support for custom headers
+ * Allow requestTimeout to be configured like other AirtableOptions
+ * Fix type warnings
+
+# v0.10.1
+ * Fix error handler in updating an array (#223)
+ * Fix binding fetch to window (#235)
+ * Update lodash and node-fetch dependencies
+ * Widen @types/node dependency
+
+# v0.10.0
+ * Convert to TypeScript. The project now comes with .d.ts typescript definition files.
+
+# v0.9.0
+ * Remove Promise polyfill (#195)
+ * Replace deprecated `request` library with `node-fetch` (#191)
+ * Increase test coverage of library to 100% (#190, #188, #187, #186, #185, #184, #183 #182, #181, #178, #177, #176, #175)
+ * Enable CI (#173, #190)
+ * Improve README (#164)
+ * Remove support for Safari 10.0
+
+# v0.8.1
+ * Require Node 8 or above (down from Node 10)
+
+# v0.8.0
+ * Require Node 10 or above
+ * Add Promise polyfill (#147)
+ * Remove `allowUnauthorizedSsl` option
+
+# v0.7.2
+ * Properly reject unauthorized SSL certificates (#140)
+ * Minor tweaks to formatting in README (#136)
+ * Update Lodash to 4.17.15 (#141)
+
+# v0.7.1
+ * Fix a User-Agent bug in Node (#132)
+ * Stop publishing non-essential files to npm (#128)
+
+# v0.7.0
+ * Remove custom class library, shrinking the file size and improving debugging (#123)
+ * Improve an error message (#115)
+ * Update Lodash to 4.17.14 (#124)
+
+# v0.6.0
+ * Add support for beta of batch record operations (#86, #88, #92)
+ * Add backoff when rate limited (#110)
+ * Shrink browser build by removing `assert` module (#101)
+ * Fix bug when calling some functions with callbacks (#103)
+
+# v0.5.10
+ * Make API key less likely to be logged (#82, #83)
+
+# v0.5.9
+ * Update `lodash` dependency (#80)
+
+# v0.5.8
+ * Remove `async` dependency (#76)
+ * Shrink size of browser build by about half (#76)
+
+# v0.5.7
+ * Support dotenv for loading config (#59)
+ * Improve error message is select() is called without args (#70)
+ * Update dependencies (#73)
+
+# v0.5.6
+ * Fix crash when specifying sort direction or cellFormat options
+
+# v0.5.5
+ * Upgrade `lodash` package from 2.4.1 to 4.17.10
+
+# v0.5.4
+ * Upgrade `request` package to 2.85.0
+
+# v0.5.3
+ * Fix User-Agent header warnings when running Chrome (#52)
+ * Fix JSON imports so webpack can bundle
+
 # v0.5.2
  * Support for the `cellFormat`, `userLocale`, and `timeZone` parameters
 
